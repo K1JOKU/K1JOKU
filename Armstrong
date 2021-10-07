@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int fst, lst, tmp, nod, num, res = 0, rem, pow, i;
+	fst = 100;
+	lst = 99999;
+	cout << "Числа Армстронга от 100 до 99999\n";
+	while (fst <= lst)
+	{
+		tmp = fst;
+		nod = 0;
+		while (tmp > 0)
+		{
+			tmp = tmp / 10;
+			nod++;
+		}
+		num = fst;
+		while (num > 0)
+		{
+			rem = num % 10;
+			pow = 1;
+			i = 0;
+			while (i < nod)
+			{
+				pow = pow * rem;
+				i++;
+			}
+			res = res + pow;
+			num = num / 10;
+		}
+		if (res == fst)
+			cout << res << endl;
+		fst++;
+		res = 0;
+	}
+	cout << endl;
+	return 0;
+}
