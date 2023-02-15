@@ -1,0 +1,9 @@
+public static boolean isSumWithinRange(int num1, int num2) { int sum = num1 + num2; if (sum >= 10 && sum <= 20) { return true; } else { return false; } } 
+
+public static void printNumberSign(int num) { if (num >= 0) { System.out.println(num + " is positive"); } else { System.out.println(num + " is negative"); } } 
+
+public static boolean isNegative(int num) { if (num < 0) { return true; } else { return false; } } 
+
+public static void printStringMultipleTimes(String str, int num) { for (int i = 0; i < num; i++) { System.out.println(str); } } 
+
+public static boolean isLeapYear(int year) { if (year % 4 == 0) { if (year % 100 == 0) { if (year % 400 == 0) { return true; } else { return false; } } else { return true; } } else { return false; } } 
